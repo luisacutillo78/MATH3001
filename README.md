@@ -14,3 +14,6 @@ https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/
 
 * Tutorial:
 https://github.com/paras42/Hello_World_Deep_Learning
+
+* Discussion blogs:
+https://colah.github.io/
