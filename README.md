@@ -17,3 +17,4 @@ https://github.com/paras42/Hello_World_Deep_Learning
 
 * Discussion blogs:
 https://colah.github.io/
+in particular: https://colah.github.io/posts/2014-10-Visualizing-MNIST/
