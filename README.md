@@ -69,3 +69,5 @@ data = input_data.read_data_sets('data/fashion', source_url='http://fashion-mnis
 
 * An official Tensorflow tutorial of using tf.keras, a high-level API to train Fashion-MNIST, can be found here:
 https://www.tensorflow.org/tutorials/keras/basic_classification
+
+* Try to replicate the datacamp tutorial in https://www.datacamp.com/community/tutorials/introduction-t-sne
