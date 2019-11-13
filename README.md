@@ -32,13 +32,40 @@ Fashion-MNIST training and test splits are similar to the original MNIST dataset
 
 Each training and test example is assigned to one of the following labels:
 
-0 T-shirt/top
-1 Trouser
-2 Pullover
-3 Dress
-4 Coat
-5 Sandal
-6 Shirt
-7 Sneaker
-8 Bag
-9 Ankle boot
+0 T-shirt/top,
+1 Trouser,
+2 Pullover,
+3 Dress,
+4 Coat,
+5 Sandal,
+6 Shirt,
+7 Sneaker,
+8 Bag,
+9 Ankle boot.
+
+Usage
+I suggest you clone the Fashion-MINST GitHub repository with the command:
+git clone git@github.com:zalandoresearch/fashion-mnist.git
+
+the dataset appears under data/fashion. The https://github.com/zalandoresearch/fashion-mnist repo also contains some scripts for benchmark and visualization!
+
+* Loading data with Python (requires NumPy)
+Use utils/mnist_reader in this repo:
+
+import mnist_reader
+X_train, y_train = mnist_reader.load_mnist('data/fashion', kind='train')
+X_test, y_test = mnist_reader.load_mnist('data/fashion', kind='t10k')
+
+* Loading data with Tensorflow
+Make sure you have downloaded the data and placed it in data/fashion. Otherwise, Tensorflow will download and use the original MNIST.
+
+from tensorflow.examples.tutorials.mnist import input_data
+data = input_data.read_data_sets('data/fashion')
+
+data.train.next_batch(BATCH_SIZE)
+Note, Tensorflow supports passing in a source url to the read_data_sets. You may use:
+
+data = input_data.read_data_sets('data/fashion', source_url='http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/')
+
+* An official Tensorflow tutorial of using tf.keras, a high-level API to train Fashion-MNIST, can be found here:
+https://www.tensorflow.org/tutorials/keras/basic_classification
