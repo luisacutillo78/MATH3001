@@ -72,25 +72,31 @@ https://www.tensorflow.org/tutorials/keras/basic_classification
 
 * Try to replicate the datacamp tutorial in https://www.datacamp.com/community/tutorials/introduction-t-sne
 
-## Notes on installinf Tensorflow
+## Notes on installing Tensorflow
 
 Install miniconda  https://docs.conda.io/en/latest/miniconda.html 
 
 Launch a conda command line and make sure that the conda command works.  Do the following
 
+```
 conda create -n cutillo python=3.6
 conda activate cutillo
 conda install tensorflow
+```
 
-Then launch python and do 
+To test this, launch python and do 
 
+```
 import tensorflow as tf
+```
 
 Tested on windows but should work fine on anything.  
 
 In the above, the environment created is called cutillo (you can use your name).  Every time you start a new session you will need to do 
 
+```
 conda activate cutillo 
+```
 
 to switch to the version of Python that has Tensorflow installed
 
