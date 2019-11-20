@@ -110,6 +110,7 @@ conda activate cutillo
 conda install tensorflow
 conda install jupyter
 conda install keras
+conda install matplotlib
 # once you created this environment, you just need to activate it when you need it and everything you installated will be in it!.```
 
 # Checking it works
@@ -135,4 +136,7 @@ To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriat
 2019-08-29 13:42:38.964533: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 8. Tune using inter_op_parallelism_threads for best performance.
 b'Hello, TensorFlow!'
 ```
-
+```
+# Back to our dataset!
+Run the classification notebook locally or here:
+https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/keras/classification.ipynb
