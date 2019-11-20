@@ -51,22 +51,23 @@ the dataset appears under data/fashion. The https://github.com/zalandoresearch/f
 
 * Loading data with Python (requires NumPy)
 Use utils/mnist_reader in this repo:
-
+```
 import mnist_reader
 X_train, y_train = mnist_reader.load_mnist('data/fashion', kind='train')
 X_test, y_test = mnist_reader.load_mnist('data/fashion', kind='t10k')
-
+```
 * Loading data with Tensorflow
 Make sure you have downloaded the data and placed it in data/fashion. Otherwise, Tensorflow will download and use the original MNIST.
-
+```
 from tensorflow.examples.tutorials.mnist import input_data
 data = input_data.read_data_sets('data/fashion')
 
 data.train.next_batch(BATCH_SIZE)
+```
 Note, Tensorflow supports passing in a source url to the read_data_sets. You may use:
-
+```
 data = input_data.read_data_sets('data/fashion', source_url='http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/')
-
+```
 * An official Tensorflow tutorial of using tf.keras, a high-level API to train Fashion-MNIST, can be found here:
 https://www.tensorflow.org/tutorials/keras/basic_classification
 
@@ -99,4 +100,39 @@ conda activate cutillo
 ```
 
 to switch to the version of Python that has Tensorflow installed
+
+# Installing
+
+```
+#conda create -n cutillo Python=3.7
+#just create this once and istall everything need afyer activating it
+conda activate cutillo
+conda install tensorflow
+conda install jupyter
+conda install keras
+# once you created this environment, you just need to activate it when you need it and everything you installated will be in it!.```
+
+# Checking it works
+
+Run an example:
+
+```
+git clone https://github.com/aymericdamien/TensorFlow-Examples
+cd TensorFlow-Examples
+cd examples
+cd TensorFlow-Examples
+python helloworld.py
+```
+
+I got 
+
+```
+WARNING: Logging before flag parsing goes to stderr.
+W0829 13:42:38.948628  9508 deprecation_wrapper.py:119] From helloworld.py:22: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2019-08-29 13:42:38.951885: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX AVX2
+To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriate compiler flags.
+2019-08-29 13:42:38.964533: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 8. Tune using inter_op_parallelism_threads for best performance.
+b'Hello, TensorFlow!'
+```
 
